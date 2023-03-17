@@ -5,11 +5,11 @@
     font-family: "Poppins", sans-serif;
   }
   body {
-    background-color: #68179e;
+    background-color: #fcb9ed;
   }
   .card {
-    width: 700px;
-    height: 450px;
+    width: 900px;
+    height: 550px;
     position: absolute;
     margin: auto;
     left: 0;
@@ -68,13 +68,15 @@
     transform: rotateY(180deg);
     background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
   }
-
+  
   .vertically-aligned{
   display: block;
   margin-left: 10%;
-  /*margin-right: auto;*/
+  margin-right: auto;
   /*width: 40%;*/
   padding: 50px 0;
+
+  
   }
 
 
@@ -86,12 +88,12 @@
   .cake {
     width: 100%;
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
   }
   .top-layer,
   .middle-layer,
   .bottom-layer {
-    height: 80px;
+    height: 90px;
     width: 240px;
     background-repeat: repeat;
     background-size: 60px 100px;
@@ -129,7 +131,7 @@
     margin: auto;
     left: 0;
     right: 0;
-    bottom: 202px;
+    bottom: 230px;
   }
   .candle:before {
     content: "";
@@ -155,3 +157,77 @@
     font-size: 120px;
     line-height: 120px;
   }
+
+.carousel {
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    display: none; /* hide all slide images not currently being viewed */
+}
+
+.carousel .carousel-item-visible {
+    display: block; /* show current slide image */
+    animation: fadeVisibility 0.55s; /* for fading effect when switching between slides */
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+/* Navigation control styles */
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* put space between the navigation buttons */
+    position: absolute; /* position navigation buttons on top */
+    top: 50%; /* center navigation buttons on the slide */
+    transform: translateY(-50%); /* align navigation buttons */
+}
+
+.carousel .carousel-actions button {
+    border-radius: 50px;
+    background-color: rgb(234, 25, 203);
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: -10px; /* prevent previous button from touching the side*/
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: -10px;  /* prevent next button from touching the side*/
+}
+
+.carousel-dots {
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+.dot {
+    opacity: 0.7; /* gray out dots for slides not being visted */
+}
+
+.dot:focus {
+    border: 1px solid black; /* dot for currently visited slide */
+}
+
+/* hanlde smooth transitions between slides */
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
