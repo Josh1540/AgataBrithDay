@@ -5,7 +5,7 @@
     font-family: "Poppins", sans-serif;
   }
   body {
-    background-color: #fcb9ed;
+    background-color: #c64489;
   }
   .card {
     width: 900px;
@@ -150,8 +150,8 @@
     margin-top: 30px;
     text-align: center;
     letter-spacing: 6px;
-    color: #f0e511f9;
-    background-color: rgba(0, 0, 0, 0.742);
+    color: #fff205f9;
+    background-color: rgb(73, 15, 169);
   }
   .inside h1 {
     font-size: 120px;
@@ -192,7 +192,7 @@
 
 .carousel .carousel-actions button {
     border-radius: 50px;
-    background-color: rgb(234, 25, 203);
+    background-color: rgb(113, 24, 255);
     border: 0;
     font-size: 16px;
     font-weight: bold;
@@ -230,4 +230,9 @@
     100% {
         opacity: 1;
     }
+}
+
+#vertical-ph{
+
+  height: 320px;
 }
