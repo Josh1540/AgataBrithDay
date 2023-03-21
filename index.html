@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birthday Card</title>
+    
     <!-- Google Font-->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -12,6 +13,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="left-col">
+      <h2>Clique aqui primeiro!</h2>
+      <!-- <p>Clique aqui primeiro!</p>   -->
+      <img id="icon" src="Play.png" alt="">
+    </div>
+
     <div class="card">
       <div class="outside">
         <div class="front">
@@ -117,6 +124,8 @@
           </div>
       </div>
 
+      
+
           <!-- <img id="messi" src="Posto-1.jpg" alt="Posto" width="325" height="250"> -->
 
           <!-- <a href="https://www.flashscore.com/team/paris-sg/CjhkPw0k/" target="_blank">
@@ -126,6 +135,26 @@
 
       </div>
     </div>
+
+    <audio id="mySong">
+      <source src="It Is Well (Portrait Remix).mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+
+      icon.onclick=function(){
+        if(mySong.paused){
+        mySong.play();
+        icon.src = "Pause.png"
+      } else {
+        mySong.pause();
+        icon.src = "Play.png"
+      }
+      }
+    </script>
+
     <script src="javascript.js"></script>
 
   </body>
